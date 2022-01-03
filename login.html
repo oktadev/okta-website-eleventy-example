@@ -1,0 +1,21 @@
+---
+layout: _layout_unauthenticated.11ty.js
+title: My Rad Markdown Blog Post
+---
+
+<div id="okta-login-container"></div>
+<script>
+  oktaSignIn.authClient.token.getUserInfo().then(function(user) {
+    window.location='/protected';
+  },function(error) {
+    oktaSignIn.showSignInToGetTokens({
+      el: '#okta-login-container'
+    }).then(function(tokens) {
+      oktaSignIn.authClient.tokenManager.setTokens(tokens);
+      oktaSignIn.remove();
+      window.location='/protected';
+    }).catch(function(err) {
+      console.error(err);
+    });
+  });
+</script>
