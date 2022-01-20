@@ -25,11 +25,11 @@ exports.render = function (data) {
 
     <script type="text/javascript">
         const oktaSignIn=new OktaSignIn({
-            baseUrl: "{{yourOktaDomain}}",
-            redirectUri: 'http://localhost:8080/',
+            baseUrl: "https://{{yourOktaDomain}}",
+            redirectUri: 'http://localhost:8080/callback',
             clientId: "{{yourClientId}}",
             authParams: {
-                issuer: "{{yourOktaDomain}}/oauth2/default"
+                issuer: "https://{{yourOktaDomain}}/oauth2/default"
             }
         });     
     </script>
