@@ -16,8 +16,8 @@ Please read [How to Build a Website With Eleventy]() to see how this app was cre
 To run this example, run the following commands:
 
 ```bash
-git clone https://github.com/oktadev/okta-vue-nuxt-example.git
-cd okta-vue-nuxt-example
+git clone https://github.com/oktadev/okta-website-eleventy-example.git
+cd okta-website-eleventy-example
 npm install
 ```
 
